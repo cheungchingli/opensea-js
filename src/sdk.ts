@@ -176,7 +176,10 @@ export class OpenSeaSDK {
   public gasPriceAddition = new BigNumber(3);
   // Multiply gas estimate by this factor when making transactions
   public gasIncreaseFactor = DEFAULT_GAS_INCREASE_FACTOR;
-
+  
+  public maxPriorityFeePerGas = "";
+  public maxFeePerGas = "";
+  
   private _networkName: Network;
   private _wyvernProtocol: WyvernProtocol;
   private _wyvernProtocolReadOnly: WyvernProtocol;
@@ -1529,7 +1532,12 @@ export class OpenSeaSDK {
         accountAddress,
       });
     }
-
+    if (this.maxPriorityFeePerGas) {
+      this.seaport.maxPriorityFeePerGas = this.maxPriorityFeePerGas;
+    }
+    if (this.maxFeePerGas) {
+      this.seaport.maxFeePerGas = this.maxFeePerGas;
+    }
     let transactionHash: string;
     switch (order.protocolAddress) {
       case CROSS_CHAIN_SEAPORT_ADDRESS: {
