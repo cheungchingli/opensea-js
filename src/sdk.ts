@@ -1,10 +1,10 @@
-import { Seaport } from "seaport-js";
-import { CROSS_CHAIN_SEAPORT_ADDRESS } from "seaport-js/lib/constants";
+import { Seaport } from "@opensea/seaport-js-gas";
+import { CROSS_CHAIN_SEAPORT_ADDRESS } from "@opensea/seaport-js-gas/lib/constants";
 import {
   ConsiderationInputItem,
   CreateInputItem,
   OrderComponents,
-} from "seaport-js/lib/types";
+} from "@opensea/seaport-js-gas/lib/types";
 import { BigNumber } from "bignumber.js";
 import { Web3JsProvider } from "ethereum-types";
 import { isValidAddress } from "ethereumjs-util";

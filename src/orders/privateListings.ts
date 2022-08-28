@@ -4,9 +4,9 @@ import {
   MatchOrdersFulfillment,
   Order,
   OrderWithCounter,
-} from "@opensea/seaport-js/lib/types";
-import { isCurrencyItem } from "@opensea/seaport-js/lib/utils/item";
-import { generateRandomSalt } from "@opensea/seaport-js/lib/utils/order";
+} from "@opensea/seaport-js-gas/lib/types";
+import { isCurrencyItem } from "@opensea/seaport-js-gas/lib/utils/item";
+import { generateRandomSalt } from "@opensea/seaport-js-gas/lib/utils/order";
 import { BigNumber } from "ethers";
 
 export const getPrivateListingConsiderations = (
